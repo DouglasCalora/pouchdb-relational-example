@@ -14,7 +14,7 @@ export default {
     const pouchDBSetup = new PouchDBSetup()
 
     pouchDBSetup.initialize()
-    pouchDBSetup.createDatabse('my_database')
+    pouchDBSetup.createDatabase('my_database')
 
     // create tables for test
     dbTest()

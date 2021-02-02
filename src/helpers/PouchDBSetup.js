@@ -23,7 +23,7 @@ export default class PouchDBSetup {
     return PouchDB
   }
 
-  createDatabse (name, options = {}) {
+  createDatabase (name, options = {}) {
     this.databases[name] = new PouchDB(name, options)
   }
 
