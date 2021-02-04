@@ -10,11 +10,18 @@ import dbTest from './helpers/dbTest'
 export default {
   name: 'App',
 
-  created () {
+  mounted () {
     const pouchDBSetup = new PouchDBSetup()
 
     pouchDBSetup.initialize()
     pouchDBSetup.createDatabase('my_database')
+    pouchDBSetup.createDatabase('my_database 2')
+    pouchDBSetup.createDatabase('my_database 4')
+
+    pouchDBSetup.sync('my_database', 'http://localhost:5984/my_database', {
+      live: true,
+      retry: true
+    })
 
     // create tables for test
     dbTest()

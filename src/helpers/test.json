@@ -1,0 +1,16 @@
+{
+  "schema": {
+    "singular": "post",
+    "plural": "posts",
+    "relations": {
+      "author": { "belongsTo": "author" },
+      "comments": { "hasMany": "comment" }
+    }
+  },
+
+  "fields": {
+    "name": {
+      ...
+    }
+  }
+}
